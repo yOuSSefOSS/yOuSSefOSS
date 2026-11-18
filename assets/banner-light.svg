@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Youssef Hegazy — Robotics Software Lead · Real-Time CFD &amp; WebGL Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#E6F2FF"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="0" x2="1">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#0284C7" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="sweep" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 150) scale(115)">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#38BDF8" stroke-opacity=".06" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1200" height="300" rx="18"/></clipPath>
+    <style>
+      .flow { fill: none; stroke: url(#stream); stroke-width: 1.4; stroke-dasharray: 120 520; animation: flow 6s linear infinite; }
+      .f2 { animation-duration: 7.5s; animation-delay: -2s; }
+      .f3 { animation-duration: 5.2s; animation-delay: -4s; }
+      .f4 { animation-duration: 8.4s; animation-delay: -1s; }
+      @keyframes flow { from { stroke-dashoffset: 640; } to { stroke-dashoffset: 0; } }
+      .radar { transform-origin: 1010px 150px; animation: spin 4s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .blip { animation: blip 4s ease-out infinite; }
+      @keyframes blip { 0%, 60% { opacity: 0; } 65% { opacity: 1; } 100% { opacity: 0; } }
+      .name { font: 800 54px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #04070F; letter-spacing: 2px; }
+      .role { font: 600 19px 'JetBrains Mono', Consolas, 'Courier New', monospace; fill: #0369A1; }
+      .meta { font: 500 13px 'JetBrains Mono', Consolas, 'Courier New', monospace; fill: #475569; letter-spacing: 1.5px; }
+      .type { clip-path: inset(0 100% 0 0); animation: type 2.6s steps(46) .4s forwards; }
+      @keyframes type { to { clip-path: inset(0 0 0 0); } }
+            @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .type { clip-path: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="url(#bg)"/>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+    <!-- streamlines bending around an airfoil -->
+    <path class="flow"    d="M-20 92 C 250 92, 420 86, 620 60 S 980 70, 1220 80"/>
+    <path class="flow f2" d="M-20 128 C 260 128, 430 120, 640 104 S 990 116, 1220 120"/>
+    <path class="flow f3" d="M-20 196 C 260 196, 440 206, 650 214 S 990 196, 1220 190"/>
+    <path class="flow f4" d="M-20 236 C 270 236, 450 246, 660 254 S 1000 236, 1220 232"/>
+    <!-- radar -->
+    <g opacity=".9">
+      <circle cx="1010" cy="150" r="115" fill="none" stroke="#38BDF8" stroke-opacity=".22"/>
+      <circle cx="1010" cy="150" r="76"  fill="none" stroke="#38BDF8" stroke-opacity=".16"/>
+      <circle cx="1010" cy="150" r="38"  fill="none" stroke="#38BDF8" stroke-opacity=".12"/>
+      <path d="M895 150H1125M1010 35V265" stroke="#38BDF8" stroke-opacity=".12"/>
+      <g class="radar"><path d="M1010 150 L1125 150 A115 115 0 0 0 1091 69 Z" fill="url(#sweep)"/><line x1="1010" y1="150" x2="1125" y2="150" stroke="#38BDF8" stroke-opacity=".8"/></g>
+      <circle class="blip" cx="1062" cy="104" r="4" fill="#38BDF8"/>
+      <text x="1010" y="284" text-anchor="middle" class="meta">FL350 · M0.85</text>
+    </g>
+    <!-- text -->
+    <text x="64" y="104" class="meta">CALLSIGN // yOuSSefOSS</text>
+    <text x="62" y="168" class="name">YOUSSEF HEGAZY</text>
+    <g class="type"><text x="64" y="212" class="role">Robotics Software Lead · Real-Time CFD &amp; WebGL</text></g>
+    <text x="64" y="252" class="meta">CS · AVIATION INFORMATION SYSTEMS · ZAGAZIG NATIONAL UNIVERSITY</text>
+    <rect x="1" y="1" width="1198" height="298" rx="17" fill="none" stroke="#38BDF8" stroke-opacity=".18"/>
+  </g>
+</svg>
